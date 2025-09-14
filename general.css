@@ -1,0 +1,43 @@
+@media (min-width: 800px) /*************** Forside *****************/ {
+.grid_2-1 {
+display: grid;
+grid-template-columns: 2fr 1fr;
+}
+.grid_1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+/*************** Operativsystemer *************/
+.grid_5-3 {
+display: grid;
+grid-template-columns: 5fr 3fr;
+gap: 10px;
+}
+
+.grid_2-3 {
+display: grid;
+grid-template-columns: 2fr 3fr;
+gap: 10px;
+}
+.grid_3-2 {
+display: grid;
+grid-template-columns: 3fr 2fr;
+gap: 10px;
+}
+.col_order {
+order: -1;
+}
+/************* Komponenter *****************/
+.grid_1-1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.flex_col {
+display: flex;
+flex-direction: column;
+}
+.flex_col img:last-child {
+margin-top: auto;
+}

@@ -1,0 +1,383 @@
+@media (min-width: 800px) /*************** Forside *****************/ {
+.grid_2-1 {
+display: grid;
+grid-template-columns: 2fr 1fr;
+}
+.grid_1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+/*************** Operativsystemer *************/
+.grid_5-3 {
+display: grid;
+grid-template-columns: 5fr 3fr;
+gap: 10px;
+}
+
+.grid_2-3 {
+display: grid;
+grid-template-columns: 2fr 3fr;
+gap: 10px;
+}
+.grid_3-2 {
+display: grid;
+grid-template-columns: 3fr 2fr;
+gap: 10px;
+}
+.col_order {
+order: -1;
+}
+/************* Komponenter *****************/
+.grid_1-1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+.flex_col {
+display: flex;
+flex-direction: column;
+}
+.flex_col img:last-child {
+margin-top: auto;
+}
+
+/*********** Galleri**********/
+.grid_1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.grid_1-1-1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+gap: 10px;
+}
+
+.max {
+max-width: 65ch;
+}
+.mobil_1-1 {
+grid-column: 3 / 5;
+}
+.img1 {
+grid-column: 1 / 3;
+grid-row: 1 / 3;
+}
+.img4 {
+grid-column: 3 / 5;
+}
+.img6 {
+grid-column: -4 / -1;
+}
+.grid_1-1-1-1 img {
+align-self: stretch;
+object-fit: cover;
+}
+}
+
+.mobil_1-1 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+/******************* Fonts ******************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+  font-family: "oswaldregular";
+  src: url(fonts/oswald-variablefont_wght-webfont.woff2) format("woff2"),
+       url(fonts/oswald-variablefont_wght-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "oswaldregular", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  h1, h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+}
+
+.playfair-display {
+font-family: "Playfair Display", serif;
+font-style: normal;
+font-weight: 400;
+}
+/******************* Menu ****************/
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #eecfe6;
+}
+
+header .logo a {
+color: #333333;
+font-size: 2rem;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+header .logo a:hover {
+color: #090000;
+}
+
+nav {
+display: flex;
+align-items: center;
+}
+
+.menu {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.menu li {
+margin-right: 20px;
+}
+
+.menu li:last-child {
+margin-right: 0;
+}
+header {
+position: sticky;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: rgb(255, 178, 178);
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+width: 50px;
+height: 50px;
+}
+
+nav {
+display: flex;
+align-items: center;
+}
+
+.menu {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.menu li {
+margin-right: 20px;
+}
+
+.menu li:last-child {
+margin-right: 0;
+}
+
+.menu a {
+display: block;
+padding: 10px;
+color: #333333;
+text-decoration: none;
+transition: color 0.3s;
+text-align: end;
+}
+
+.menu a:hover {
+color: #ff0000;
+}
+
+.burger {
+width: 30px;
+height: 20px;
+cursor: pointer;
+}
+
+.burger .line {
+width: 100%;
+height: 2px;
+background-color: #333333;
+margin-bottom: 5px;
+transition: 0.2s linear;
+}
+.burger {
+display: none;
+}
+@media screen and (max-width: 800px) {
+.menu {
+display: none;
+}
+.burger {
+display: block;
+}
+.burger.active .line:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+opacity: 0;
+transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+transform: rotate(-45deg) translate(5px, -5px);
+transition: 0.2s linear;
+}
+
+nav.active .menu {
+display: block;
+background-color: #f19494;
+position: absolute;
+top: 94px;
+left: 0;
+width: 100%;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+z-index: 10;
+}
+
+nav.active .menu li {
+margin: 10px 20px;
+}
+
+nav.active .menu a {
+font-size: 24px;
+}
+}
+
+/***************** Body *******************/
+body {
+font-family: "oswaldregular";
+line-height: 1.5;
+margin: 0;
+padding: 0;
+background-color: rgb(203, 247, 240);
+color: rgb(12, 1, 1);
+max-width: 1000px;
+margin-inline: auto;
+}
+
+/*************** tekst format **************/
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-block: 20px;
+  box-sizing: content-box;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(17, 16, 17);
+  margin-block: 20px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  box-sizing: content-box;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+}
+
+h3 {
+color: rgb(1, 1, 1);
+font-family: "oswaldregular";
+margin-block: 20px;
+box-sizing: content-box;
+}
+
+p {
+margin-bottom: 10px;
+font-family: "Playfair Display", serif;
+}
+
+/************* Hovedindhold **************/
+main {
+margin: 40px auto; /* Centreret indhold */
+padding: 20px;
+background-color: #f5dfbd;
+}
+
+/**************** box *****************/
+dl {
+background: rgb(255, 178, 178);
+padding: 15px;
+border-radius: 5px;
+}
+
+dt {
+font-weight: bold;
+margin-top: 10px;
+}
+
+/**************** Img ****************/
+
+.box_4 {
+margin-top: auto;
+}
+img {
+width: 100%;
+height: auto;
+display: block;
+}
+/************* knap ******************/
+.cat {
+border-radius: 7px;
+background-color: rgb(255, 178, 178);
+color: rgb(0, 0, 0);
+padding: 1rem;
+margin: 1rem;
+text-decoration: none;
+display: inline-block;
+}
+.col {
+padding: 10px;
+}
+
+footer {
+background-color: rgb(245, 215, 166);
+}
+
+.grid {
+position: relative;
+margin: 0 auto;
+padding: 1em 0 4em;
+max-width: 1000px;
+list-style: none;
+text-align: center;
+}
+
+
